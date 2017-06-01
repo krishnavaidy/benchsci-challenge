@@ -15,7 +15,6 @@ def get_pmcid():
     if not QueryAndLoadMongo.does_exist(pmcid):
         json_object = ExtractFigPublications.read_xml_aux(pmcid)
         print('Inserting Json Object')
-        print(json_object)
         if json_object is not None:
             QueryAndLoadMongo.insert_to_db(json_object)
         else:
