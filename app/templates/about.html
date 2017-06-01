@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About</title>
+ 
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/query.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script src="../static/js/getPmcid.js"></script>
+    <style>
+    li {
+        float: left;
+    }
+    </style>
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">About</a></li>
+            <li role="presentation"><a href="references.html">References</a></li>
+            <li role="presentation"><a href="query.html">Query Data</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">BenchSci Take-Home Test</h3>
+      </div>
+ 
+      <div class="jumbotron">
+        <h1>About</h1>
+        <ul>
+            <li>Xml files of all publications are stored on server.</li>
+            <li>Json files of processed publications with pmcid, figure uri,
+            figure text, and co-occurrences are stored in MongoDB.</li>
+            <li>When pmcid is queried on page, MongoDB is queried to see if
+            corresponding json file is stored, and if not, xml file of the
+            publication is processed and json file is stored in MongoDB.
+            <li>Results: figure uris and co-occurrences are showed on result
+            page.</li>
+            <li>Json and csv files with all the data is currently not served,
+            but code tp generate json file is on github.</li>
+        </ul>
+    </div> 
+ 
+      <footer class="footer">
+        <p>&copy; Krishna 2017</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>
